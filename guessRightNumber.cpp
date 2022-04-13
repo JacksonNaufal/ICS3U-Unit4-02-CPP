@@ -12,7 +12,7 @@ int main() {
     // this function is a loop adder
     std::string integerAsNumber;
     int number;
-    int total = 0;
+    int total = 1;
     int loopNumber = 0;
 
 
@@ -24,10 +24,10 @@ int main() {
     // process & output
     try {
         number = std::stoi(integerAsNumber);
-    while (loopNumber < number) {
+    do  {
         loopNumber = loopNumber + 1;
-        total = total + loopNumber;
-     }
+        total = total * loopNumber;
+     } while (loopNumber < number);
         std::cout << "The sum of all the positive numbers from 1 to "
         << number << " is " << total << std::endl;
     } catch (std::invalid_argument) {
